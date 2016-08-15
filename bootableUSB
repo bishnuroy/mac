@@ -1,0 +1,19 @@
+1. download .iso image in local mac folder.
+2. insert pen drive in mac.
+3. open terminal and execute below command.
+
+  $ diskutil list
+  (This command will show you the disk list in your mac.
+  To confirm you can execute this command before and after inserting pen)
+  
+  $ diskutil unmountDisk /dev/diskX
+  **if pendrive disk disk2, replace "X" by "2"
+  
+  $ sudo dd if="iso path" of=pendrive path bs=1m
+   eg. $ sudo dd if=ISO/en_windows_7_ultimate_with_sp1_x64_dvd_u_677332.iso of=/dev/disk2 bs=1m
+  
+  finul command:
+  diskutil eject /dev/diskX
+  
+Now your pendrive is ready to use as a bootable disk.
+  
